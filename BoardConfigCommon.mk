@@ -135,6 +135,9 @@ TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
+# Radio
+TARGET_USES_OLD_MNC_FORMAT := true
+
 # Recovery
 ifneq ($(TARGET_DEVICE),tiare)
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
