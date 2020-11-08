@@ -1,1 +1,4 @@
 allow init proc_boot_reason:file r_file_perms;
+
+# Transitions to seclabel processes in init.rc
+domain_auto_trans(init, vendor_charger_exec, vendor_charger)
