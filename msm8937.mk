@@ -392,6 +392,8 @@ PRODUCT_COPY_FILES += \
 
 # ROM: CherishOS
 ifneq ($(wildcard vendor/cherish),)
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-cherish
+
 ifneq ($(DEVICE),tiare)
 WITH_GMS ?= true
 endif
