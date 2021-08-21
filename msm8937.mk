@@ -390,5 +390,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
+# ROM: CherishOS
+ifneq ($(wildcard vendor/cherish),)
+ifneq ($(DEVICE),tiare)
+WITH_GMS ?= true
+endif
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+endif # vendor/cherish
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/msm8937-common/msm8937-common-vendor.mk)
