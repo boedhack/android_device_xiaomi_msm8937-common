@@ -397,6 +397,9 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-cherish
 ifneq ($(DEVICE),tiare)
 WITH_GMS ?= true
 endif
+ifneq ($(WITH_GMS),true)
+USE_LAWNCHAIR := true
+endif
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 endif # vendor/cherish
